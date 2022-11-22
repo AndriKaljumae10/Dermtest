@@ -1,0 +1,40 @@
+<form [formGroup]="form">
+  <div class="form-container">
+      <mat-label>Name</mat-label>
+      <mat-form-field appearance="outline">
+          <input formControlName="name" matInput type="string">
+      </mat-form-field>
+      <mat-label>Comment</mat-label>
+      <mat-form-field appearance="outline">
+          <input formControlName="comment" matInput type="string">
+      </mat-form-field>
+  </div>
+</form>
+
+<div class="button-container">
+  <button class="button" (click)="submit()">
+      <mat-label>
+          Post comment
+      </mat-label>
+  </button>
+</div>
+
+<div>
+  <div>
+      <mat-grid-list cols="2">
+          <mat-grid-tile>
+              <mat-label>
+                  Number of comments<br>
+                  <span class="bold">{{totalComments}}</span>
+              </mat-label>
+          </mat-grid-tile>
+          <mat-divider></mat-divider>
+          <mat-grid-tile>
+              <mat-label>
+                  All comments: <br>
+                  <span>sdasd</span>
+              </mat-label>
+          </mat-grid-tile>
+      </mat-grid-list>
+  </div>
+
