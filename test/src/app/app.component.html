@@ -1,3 +1,7 @@
+<div class="introduction">
+    <mat-label>What are you thinking about?</mat-label>
+</div>
+
 <form [formGroup]="form">
     <div class="form-container">
         <mat-label>Name</mat-label>
@@ -19,10 +23,12 @@
     </button>
 </div>
 
-<mat-label class="comment-list">All comments:</mat-label>
+<div class="comment-section-container">
+    <mat-label class="comment-list">All comments:</mat-label>
 
-<div class="comment-section" *ngFor="let comment of comments">
-    <h6>{{comment.name}}:</h6>
-    <p>{{comment.text}}</p>
-    <mat-divider></mat-divider>
+    <div class="comment-section" *ngFor="let comment of comments">
+        <h6>{{comment.name}}:</h6>
+        <p>{{comment.text}}</p>
+        <mat-divider></mat-divider>
+    </div>
 </div>

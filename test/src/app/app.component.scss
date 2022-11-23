@@ -1,3 +1,13 @@
+.introduction {
+    text-align: center;
+    height: 60px;
+    padding-top: 40px;
+    mat-label {
+        font-size: 30px;
+        font-style: bold;
+    }
+}
+
 .form-container>* {
     width: 100%;
 }
@@ -20,6 +30,10 @@
     font-size: 18px;
 }
 
+.comment-section-container {
+    padding-top: 40px;
+    padding-left: 10px;
+}
 .comment-section {
     h6 {
         font-size: 16px;
