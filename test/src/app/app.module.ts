@@ -12,7 +12,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDividerModule } from '@angular/material/divider';
-import { MatGridListModule } from '@angular/material/grid-list';
 
 
 @NgModule({
@@ -30,7 +29,6 @@ import { MatGridListModule } from '@angular/material/grid-list';
         MatButtonModule,
         MatCheckboxModule,
         MatDividerModule,
-        MatGridListModule,
         BrowserAnimationsModule,
     ],
     providers: [],

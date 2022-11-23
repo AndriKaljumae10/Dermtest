@@ -9,9 +9,7 @@ import { CommentListService } from './comment-list.service';
 })
 export class AppComponent implements OnInit {
 	public form: FormGroup;
-	public totalComments: number;
 	public comments: any[] = [];
-
 
 	public constructor(
 		private readonly formBuilder: FormBuilder,
@@ -19,18 +17,19 @@ export class AppComponent implements OnInit {
 	) {
 		this.form = this.formBuilder.group({
 			name: ["", Validators.required],
-			comment: ["", Validators.required]
+			text: ["", Validators.required]
 		})
-		this.totalComments = 0;
 	}
 
 	public ngOnInit(): void {
-		this.commentListService.fetchComments().subscribe((res) => {
-			console.log(res)
-		})
+		this.commentListService.fetchComments().subscribe(comments => this.comments = comments)
 	}
 
 	public submit() {
-		console.log(this.form.value)
+		if (this.form.valid) {
+			this.commentListService.addComment(this.form.value).subscribe(res => {
+				this.commentListService.fetchComments().subscribe(comments => this.comments = comments)
+			})
+		}
 	}
 }

@@ -11,7 +11,7 @@ export class CommentListService {
     private commentsUrl = 'api/comments';
 
     public constructor(
-        private http: HttpClient
+        private http: HttpClient,
     ) {
     }
 
